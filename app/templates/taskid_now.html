@@ -1,0 +1,139 @@
+{% extends 'layout.html'%}
+
+{% block content %} 
+
+  <br>
+  <section class="content container" >
+    <div class="container-fluid">
+      <div class="row" >
+
+        <div class="col-12 callout callout-info">
+          <h5><i class="fas fa-info"></i> Note:</h5>
+          <h3>Membaca task Id Local. Jumlah Hari Ini = {{ss}}<b></b> </h3>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box">
+            <span class="info-box-icon bg-info elevation-1"><i class="fas fa-paper-plane"></i></span>
+    
+            <div class="info-box-content">
+              <span class="info-box-text">Kirim Berkas 3</span>
+              <span class="info-box-number">
+                <h3>{{task_3}}</h3>
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-check-double"></i></span> <i class="fa-regular fa-circle-check"></i>
+    
+            <div class="info-box-content">
+              <span class="info-box-text">Berkas Diterima 4</span>
+              <span class="info-box-number">
+                <h3>{{task_4}}</h3>
+              </span>
+              
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+    
+        <!-- fix for small devices only -->
+        <div class="clearfix hidden-md-up"></div>
+    
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-success elevation-1"><i class="fas fa-user-check"></i></span>
+    
+            <div class="info-box-content">
+              <span class="info-box-text">Set Status Sudah 5</span>
+              <span class="info-box-number">
+                <h3>{{task_5}}</h3>
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-secondary elevation-1"><i class="fas fa-notes-medical"></i></span> 
+    
+            <div class="info-box-content">
+              <span class="info-box-text">Permintaan Resep 6</span>
+              <span class="info-box-number">
+                <h3>{{task_6}}</h3>
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-secondary elevation-1"><i class="fas fa-notes-medical"></i></span>
+    
+            <div class="info-box-content">
+              <span class="info-box-text">Validasi Resep 7</span>
+              <span class="info-box-number">
+                <h3>{{task_7}}</h3>
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="info-box mb-3">
+            <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-ban"></i></span>
+    
+            <div class="info-box-content">
+              <span class="info-box-text">Batal 99 </span>
+              <span class="info-box-number"> 
+                <h3>{{task_7}}</h3>
+              </span>
+            </div>
+            <!-- /.info-box-content -->
+          </div>
+          <!-- /.info-box -->
+        </div>
+        <!-- /.col -->
+      </div>
+    </div>
+    </section>
+
+
+  <table class="table container">
+    <thead>
+      <tr>
+        <th scope="col">No</th>
+        <th scope="col">No Rawat</th>
+        <th scope="col">RM</th>
+        <th scope="col">Nama</th>
+        <th scope="col">Poli</th>
+        <th scope="col">Task Id</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for row in rs %}
+      <tr>
+        <th scope="row">{{loop.index}}</th>
+        <td>{{row.0}}</td>
+        <td>{{row.1}}</td>
+        <td>{{row.2}}</td>
+        <td>{{row.3}}</td>
+        <td>{{row.4}}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table> 
+
+
+{% endblock %}
